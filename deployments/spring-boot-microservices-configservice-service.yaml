@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-03-13T07:48:44Z"
+  labels:
+    app: spring-boot-microservices-configservice
+  name: spring-boot-microservices-configservice
+  namespace: default
+  resourceVersion: "609056"
+  uid: 6b4cd9ae-1522-45a5-ae58-c9569d229ad2
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.100.31.125
+  clusterIPs:
+  - 10.100.31.125
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30750
+    port: 80
+    protocol: TCP
+    targetPort: 8888
+  selector:
+    app: spring-boot-microservices-configservice
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

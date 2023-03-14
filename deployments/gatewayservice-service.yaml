@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-03-13T06:28:05Z"
+  labels:
+    app: gatewayservice
+  name: a---80-9999
+  namespace: default
+  resourceVersion: "595959"
+  uid: 7998d27d-16f5-486b-a1f1-9c28ad552d7f
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.100.50.88
+  clusterIPs:
+  - 10.100.50.88
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30794
+    port: 80
+    protocol: TCP
+    targetPort: 9999
+  selector:
+    app: gatewayservice
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}

@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: "2023-03-13T08:05:52Z"
+  generation: 1
+  labels:
+    app: spring-boot-microservices-counterservice
+  name: spring-boot-microservices-counterservice
+  namespace: default
+  resourceVersion: "611831"
+  uid: c179c534-7823-4608-9d45-8f24474e4f7b
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: spring-boot-microservices-counterservice
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spring-boot-microservices-counterservice
+    spec:
+      containers:
+      - image: ganeshreddy4ongraph/springboot-applications:spring-boot-microservices_counterservice
+        imagePullPolicy: IfNotPresent
+        name: springboot-applications
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status: {}
