@@ -3,8 +3,4 @@ resources:
   - deployments/spring-boot-microservices_configservice.yaml
   - deployments/spring-boot-microservices_counterservice.yaml
   - deployments/spring-boot-microservices_registryservice.yaml
-  - deployments/spring-boot-microservices-configservice-service.yaml
-  - deployments/spring-boot-microservices-counterservice-service.yaml
-  - deployments/spring-boot-microservices-registryservice-service.yaml
-  - deployments/gatewayservice-service.yaml
 

@@ -1,31 +1,28 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2023-03-13T06:28:05Z"
+  creationTimestamp: "2023-03-15T11:07:02Z"
   labels:
     app: gatewayservice
-  name: a---80-9999
+  name: gatewayservice
   namespace: default
-  resourceVersion: "595959"
-  uid: 7998d27d-16f5-486b-a1f1-9c28ad552d7f
+  resourceVersion: "11499"
+  uid: 032f58cf-b909-49ad-98d9-93e03d747ede
 spec:
-  allocateLoadBalancerNodePorts: true
-  clusterIP: 10.100.50.88
+  clusterIP: 172.20.185.217
   clusterIPs:
-  - 10.100.50.88
-  externalTrafficPolicy: Cluster
+  - 172.20.185.217
   internalTrafficPolicy: Cluster
   ipFamilies:
   - IPv4
   ipFamilyPolicy: SingleStack
   ports:
-  - nodePort: 30794
-    port: 80
+  - port: 80
     protocol: TCP
-    targetPort: 9999
+    targetPort: 8888
   selector:
     app: gatewayservice
   sessionAffinity: None
-  type: LoadBalancer
+  type: ClusterIP
 status:
   loadBalancer: {}

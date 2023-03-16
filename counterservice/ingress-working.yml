@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: "2023-03-15T10:16:46Z"
+  generation: 11
+  name: simple-fanout-ingress
+  namespace: default
+  resourceVersion: "18652"
+  uid: 675b7c77-05a8-4b4b-bb1e-81b629ef6cb2
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: app1.shreenarayantech.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: gatewayservice
+            port:
+              number: 9999
+        path: /
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: spring-boot-microservices-configservice
+            port:
+              number: 8888
+        path: /app2
+        pathType: ImplementationSpecific
+      - backend:
+          service:
+            name: spring-boot-microservices-registryservice
+            port:
+              number: 8761
+        path: /app3
+        pathType: ImplementationSpecific
+status:
+  loadBalancer:
+    ingress:
+    - ip: 3.17.153.208

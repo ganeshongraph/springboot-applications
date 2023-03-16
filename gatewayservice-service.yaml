@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2023-03-15T11:10:47Z"
+  labels:
+    app: gatewayservice
+  name: gatewayservice
+  namespace: default
+  resourceVersion: "12183"
+  uid: 4d4e67ee-8fdf-4247-b8d5-9ab1e4e07a24
+spec:
+  clusterIP: 172.20.67.224
+  clusterIPs:
+  - 172.20.67.224
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 9999
+    protocol: TCP
+    targetPort: 9999
+  selector:
+    app: gatewayservice
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
