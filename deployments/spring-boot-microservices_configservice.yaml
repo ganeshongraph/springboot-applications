@@ -1,14 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: "2023-03-13T07:47:25Z"
   generation: 1
   labels:
     app: spring-boot-microservices-configservice
   name: spring-boot-microservices-configservice
   namespace: default
-  resourceVersion: "608821"
-  uid: fe864c0b-e8f1-44d6-a2b1-a62b78ffff54
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
