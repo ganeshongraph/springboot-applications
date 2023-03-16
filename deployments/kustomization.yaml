@@ -1,0 +1,8 @@
+resources:
+  - spring-boot-microservices_configservice.yaml
+  - spring-boot-microservices_registryservice.yaml
+  - spring-boot-microservices_counterservice.yaml
+  - spring-boot-microservices_gatewayservice.yaml
+  - spring-boot-microservices-registryservice.service.yaml
+  - spring-boot-microservices-gatewayservice.service.yaml
+  - spring-boot-microservices-configservice.service.yaml
