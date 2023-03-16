@@ -25,7 +25,7 @@ spec:
         app: spring-boot-microservices-configservice
     spec:
       containers:
-      - image: ganeshreddy4ongraph/springboot-applications:spring-boot-microservices_configservice
+      - image: 314291991123.dkr.ecr.us-east-2.amazonaws.com/spring-bootapplications:configservice
         imagePullPolicy: IfNotPresent
         name: springboot-applications
         ports:
