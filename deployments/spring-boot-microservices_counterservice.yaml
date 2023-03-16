@@ -1,14 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: "2023-03-13T08:05:52Z"
   generation: 1
   labels:
     app: spring-boot-microservices-counterservice
   name: spring-boot-microservices-counterservice
   namespace: default
-  resourceVersion: "611831"
-  uid: c179c534-7823-4608-9d45-8f24474e4f7b
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
